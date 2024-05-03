@@ -9,4 +9,3 @@ compose global require laravel/installer
 php artisan serve
 
 перед вызовом вышеописанной стрчоки обязательно проверьте что находителсь в корне проекта
-
