@@ -1,7 +1,7 @@
 import { Link, Head } from '@inertiajs/react';
 import Header from '@/Components/header/Header';
 import TrashComponent from "@/Components/aboba.jsx";
-
+git s
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
