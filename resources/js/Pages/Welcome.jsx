@@ -1,4 +1,5 @@
 import { Link, Head } from '@inertiajs/react';
+import TrashComponent from "@/Components/aboba.jsx";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -11,6 +12,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
             <Head title="Welcome" />
+            <TrashComponent/>
             <div className="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
                 <img
                     id="background"
