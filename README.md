@@ -1,6 +1,8 @@
+нужно накатить compose!!!1
+
 вероятно для запуска нужно в корне проекта прописать следующее(если раньше не работали с ларавел) ну и не только я хз лучше пропишите))))
 
-compose global require laravel/inraller
+compose global require laravel/installer
 
 затем
 
