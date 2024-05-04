@@ -48,8 +48,11 @@ Route::get('/maps', function () {
     return view("maps123");
 });
 
-
 Route::get('/trash_cr', function () {
     return view("trash_create");
 });
 Route::post('/trash', [TrashController::class, 'store'])->name('trash.store');
+
+Route::get('/address', function () {
+    return view("address");
+});

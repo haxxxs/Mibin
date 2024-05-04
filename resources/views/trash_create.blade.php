@@ -6,7 +6,6 @@
     <title>@yield('title')</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
-        /* Стили для контейнера формы */
         .form-container {
             max-width: 600px;
             margin: 0 auto;
@@ -14,13 +13,9 @@
             background-color: #f8f9fa;
             border-radius: 10px;
         }
-
-        /* Стили для формы */
         form {
             margin-bottom: 20px;
         }
-
-        /* Стили для инпутов и textarea */
         input[type="text"],
         input[type="file"],
         textarea {
@@ -31,10 +26,16 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
-
-        /* Стили для кнопки */
         button {
-            background-color: #007bff;
+            background: linear-gradient(#13563a, #35b661);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back{
+            background: linear-gradient(#561313, #b63535);
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -42,11 +43,6 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Стили для карты */
         #map {
             width: 100%;
             height: 400px;
@@ -84,6 +80,7 @@
                     <input type="text" id="price" name="price" required><br><br>
                     <input type="hidden" id="trash_status" name="trash_status" value="1"><br><br>
 
+                    <button class="back" type="button" onclick="window.location.href = '/'">Back</button>
                     <button type="submit">Submit</button>
                 </form>
             </div>
