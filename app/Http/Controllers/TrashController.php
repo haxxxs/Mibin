@@ -29,13 +29,20 @@ class TrashController extends Controller
         ]);
 
         $photoPath = $request->file('photo')->store('public/storage');
+<<<<<<< HEAD
+=======
+
+>>>>>>> c2ae501350475f4f81f5f2b7086f8bc3e619f1c3
         $confirmationPhotoPath = null;
         if ($request->hasFile('confirmation_photo')) {
             $confirmationPhotoPath = $request->file('confirmation_photo')->store('public/storage');
         }
 
         $trash = new Trash();
+<<<<<<< HEAD
         $trash->user_id = "1";
+=======
+>>>>>>> c2ae501350475f4f81f5f2b7086f8bc3e619f1c3
         $trash->photo_url = '/' . basename($photoPath);
         $trash->address = $request->address;
         $trash->city = $request->city;

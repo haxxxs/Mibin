@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import TrashComponent from "@/Components/aboba";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
+
+
     const [trashData, setTrashData] = useState([]);
     const [searchCity, setSearchCity] = useState([]);
 
@@ -23,6 +25,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             .catch((error) => {
                 console.error("Error fetching trash data:", error);
             });
+    }, []);
     }, []);
 
     return (
