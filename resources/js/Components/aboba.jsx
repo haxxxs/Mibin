@@ -8,6 +8,7 @@ function TrashComponent() {
         axios.get('/trash')
             .then(response => {
                 setTrashData(response.data);
+                console.log(response.data)
             })
             .catch(error => {
                 console.error('Error fetching trash data:', error);

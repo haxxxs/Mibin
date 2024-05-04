@@ -6,18 +6,19 @@ import TrashComponent from "@/Components/aboba";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
+
     const [trashData, setTrashData] = useState([]);
 
     useEffect(() => {
         axios.get('/trash')
             .then(response => {
                 setTrashData(response.data);
-                console.log(data)
+                console.log(response.data)
             })
             .catch(error => {
                 console.error('Error fetching trash data:', error);
             });
-    }, []); 
+    }, []);
 
     return (
         <>

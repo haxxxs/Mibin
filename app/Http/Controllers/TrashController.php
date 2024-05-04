@@ -32,20 +32,20 @@ class TrashController extends Controller
             'trash_status'=>'required|integer'
         ]);
 
-        $photoPath = $request->file('photo')->store('photos');
+        $photoPath = $request->file('photo')->store('public/storage');
 
         $confirmationPhotoPath = null;
         if ($request->hasFile('confirmation_photo')) {
-            $confirmationPhotoPath = $request->file('confirmation_photo')->store('confirmation_photos');
+            $confirmationPhotoPath = $request->file('confirmation_photo')->store('public/storage');
         }
 
         $trash = new Trash();
-        $trash->photo_url = $photoPath;
+        $trash->photo_url = '/' . basename($photoPath);
         $trash->address = $request->address;
         $trash->city = $request->city;
         //$trash->caller_id = $request->index('user_id');
         $trash->request_comment = $request->request_comment;
-        $trash->confirmation_photo_url = $confirmationPhotoPath;
+        $trash->confirmation_photo_url = $confirmationPhotoPath ? '/' . basename($confirmationPhotoPath) : null;
         $trash->price = $request->price;
         $trash->save();
 
