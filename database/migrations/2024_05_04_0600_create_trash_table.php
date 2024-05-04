@@ -18,9 +18,8 @@ class CreateTrashTable extends Migration
             $table->string('photo_url');
             $table->string('address');
             $table->text('request_comment')->nullable();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('trash_status')->constrained()->cascadeOnDelete();
-            $table->foreignId('utilizator_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('trash_status_id')->constrained();
             $table->string('confirmation_photo_url')->nullable();
             $table->integer('price')->nullable();
             $table->string('city');
