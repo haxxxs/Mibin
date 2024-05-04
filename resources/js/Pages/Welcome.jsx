@@ -36,7 +36,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <div className="">
                         <p>
                             {searchCity
-                                ? `Поиск по городу: "${searchCity}"`
+                                ? `Поиск по адресу: "${searchCity}"`
                                 : "Все города"}
                         </p>
                     </div>

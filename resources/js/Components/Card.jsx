@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 export default function Card(props) {
+    const [isAdded,setIsAdded] = useState(false)
+
+    const onClickBtn = () => {
+        setIsAdded(!isAdded)
+    }
+
     return (
         <div className="cardImg">
             <img className="img" src={"storage/storage/" + props.imgUrl} alt="" />
@@ -10,7 +18,7 @@ export default function Card(props) {
                 <p>{props.comment}</p>
             </div>
             <div className="btn">
-                <button>Выполнить заявку</button>
+                <img onClick={onClickBtn} src={isAdded ? "images/buttonAdd.png" : "images/buttonAdded.png"} alt="" />
             </div>
         </div>
     );
