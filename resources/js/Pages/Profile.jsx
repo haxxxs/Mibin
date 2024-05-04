@@ -3,6 +3,20 @@ import Card from "@/Components/Card";
 import CardAuth from "@/Components/CardAuth";
 
 export default function Profile() {
+    const arr = [
+        {
+            imgUrl: "imageTrash/trash1.jpg",
+            address: "Площадь Куйбышева, Самара, Россия, 443099",
+            comment: "Что за беспредел",
+            verify: "imageTrash/trash1.jpg",
+        },
+        {
+            imgUrl: "imageTrash/trash2.jpg",
+            address: "Вольская, Саратов, Россия, 443088",
+            comment: "Беда",
+            verify: "imageTrash/trash2.jpg",
+        },
+    ];
     return (
         <>
             <Header />
@@ -30,7 +44,13 @@ export default function Profile() {
                             </div>
                         </div>
                     </div>
-                    <CardAuth/>
+                    {arr.map((obj) => (
+                        <CardAuth
+                            imgUrl={obj.imgUrl}
+                            address={obj.address}
+                            comment={obj.comment}
+                        />
+                    ))}
                 </div>
             </div>
         </>

@@ -1,19 +1,23 @@
 import { Link, Head } from "@inertiajs/react";
 import Header from "@/Components/header/Header";
 import Card from "@/Components/Card";
+import { useEffect, useState } from "react";
+import TrashComponent from "@/Components/aboba";
+
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
-    const arr = [
-        {
-            imgUrl: "imageTrash/trash1.jpg",
-            address: "Площадь Куйбышева, Самара, Россия, 443099",
-            comment: "Что за беспредел",
-        },
-        {
-            imgUrl: "imageTrash/trash2.jpg",
-            address: "Вольская, Саратов, Россия, 443088",
-            comment: "Беда",
-        },
-    ];
+
+    const [trashData, setTrashData] = useState([]);
+
+    useEffect(() => {
+        axios.get('/trash')
+            .then(response => {
+                setTrashData(response.data);
+                console.log(data)
+            })
+            .catch(error => {
+                console.error('Error fetching trash data:', error);
+            });
+    }, []); 
 
     return (
         <>
@@ -41,11 +45,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </div>
                     </div>
                     <div className="cmp">
-                        {arr.map((obj) => (
+                        {trashData.map((obj) => (
                             <Card
                                 address={obj.address}
-                                imgUrl={obj.imgUrl}
-                                comment={obj.comment}
+                                imgUrl={obj.photo_url}
+                                comment={obj.request_comment}
                             />
                         ))}
                     </div>

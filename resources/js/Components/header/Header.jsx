@@ -11,9 +11,11 @@ export default function Header() {
                 <div className="firstBtn">
                     <button>Выполнить заявку</button>
                 </div>
-                <div className="secondBtn">
-                    <button>Оставить заявку</button>
-                </div>
+                <a href="/RequestForm" className="noDecor">
+                    <div className="secondBtn">
+                        <button>Оставить заявку</button>
+                    </div>
+                </a>
             </div>
             <div className="rightSide">
                 <div className="adress">
