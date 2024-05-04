@@ -42,6 +42,7 @@ class TrashController extends Controller
         $trash->request_comment = $request->request_comment;
         $trash->confirmation_photo_url = $confirmationPhotoPath ? '/' . basename($confirmationPhotoPath) : null;
         $trash->price = $request->price;
+        $trash->trash_status_id = 1;
         $trash->save();
 
         return response()->json(['message' => 'Trash created successfully', 'data' => $trash], 201);
