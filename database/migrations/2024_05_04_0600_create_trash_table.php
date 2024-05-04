@@ -18,11 +18,12 @@ class CreateTrashTable extends Migration
             $table->string('photo_url');
             $table->string('address');
             $table->text('request_comment')->nullable();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->default(1)->constrained();
             $table->foreignId('trash_status_id')->default(1);
             $table->string('confirmation_photo_url')->nullable();
             $table->integer('price')->nullable();
             $table->string('city');
+            $table->boolean('isMibin')->nullable()->default(false);
             $table->timestamps();
         });
     }
