@@ -8,7 +8,7 @@ export default function RequestForm() {
                     </div>
                     <div className="other">
                         <div className="addressForm">
-                            <p>Адресс</p>
+                            <p>Адрес</p>
                             <input type="text" />
                         </div>
                         <div className="comForm">

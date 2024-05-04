@@ -1,7 +1,7 @@
 export default function Card(props) {
     return (
         <div className="cardImg">
-            <img src={props.imgUrl} alt="" />
+            <img className="img" src={"storage/storage/" + props.imgUrl} alt="" />
             <div className="address">
                 <p>{props.address}</p>
             </div>

@@ -7,7 +7,7 @@ export default function Profile() {
         {
             imgUrl: "imageTrash/trash1.jpg",
             address: "Площадь Куйбышева, Самара, Россия, 443099",
-            comment: "Что за беспредел",
+            comment: "Что за",
             verify: "imageTrash/trash1.jpg",
         },
         {
@@ -33,13 +33,13 @@ export default function Profile() {
                                     <p>Адрес</p>
                                 </div>
                                 <div className="descriptionAuth">
-                                    <p>Комментарии к запросу</p>
+                                    <p>Комментарии</p>
                                 </div>
                                 <div className="verifyPhoto">
-                                    <p>Фото подтверждение</p>
+                                    <p>Подтверждение</p>
                                 </div>
                                 <div className="btn">
-                                    <p>Мои вознаграждения</p>
+                                    <p>Вознаграждения</p>
                                 </div>
                             </div>
                         </div>
