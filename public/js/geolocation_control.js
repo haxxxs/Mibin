@@ -35,8 +35,11 @@ ymaps.ready(function () {
         ymaps.geocode(userCoordinates).then(function (res) {
             var firstGeoObject = res.geoObjects.get(0);
             var address = firstGeoObject.getAddressLine();
+            var cityaddr = firstGeoObject.getLocalities().join(', ')
 
             document.getElementById('address').value = address;
+            document.getElementById('city').value = cityaddr;
+
         });
     }, function (error) {
         console.error("Ошибка получения местоположения:", error);
