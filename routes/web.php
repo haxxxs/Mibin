@@ -36,6 +36,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/trash', [TrashController::class, 'index'])->name('trash_index');
+Route::get('/get_adresses', [TrashController::class, 'get_adresses'])->name('get_adresses');
 Route::post('/trash', [TrashController::class, 'store'])->name('trash_store');
 Route::get('/trash/{thiscity}', [TrashController::class, 'trashByCity']);
 
