@@ -43,8 +43,12 @@ Route::get('/test', function () {
     return view("trash_store");
 });
 
+Route::get('/maps', function () {
+    return view("maps123");
+});
+
 
 Route::get('/trash_cr', function () {
     return view("trash_create");
 });
-Route::post('/trash', [TrashController::class, 'store'])->name('trash.store');  
+Route::post('/trash', [TrashController::class, 'store'])->name('trash.store');
