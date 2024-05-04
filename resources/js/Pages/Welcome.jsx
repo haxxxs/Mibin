@@ -5,19 +5,25 @@ import { useEffect, useState } from "react";
 import TrashComponent from "@/Components/aboba";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
-
     const [trashData, setTrashData] = useState([]);
+    const [searchCity, setSearchCity] = useState([]);
+
+    const onChangeSearchInput = (event) => {
+        // console.log(event.target.value)
+        setSearchCity(event.target.value);
+    };
 
     useEffect(() => {
-        axios.get('/trash')
-            .then(response => {
+        axios
+            .get("/trash")
+            .then((response) => {
                 setTrashData(response.data);
-                console.log(data)
+                console.log(data);
             })
-            .catch(error => {
-                console.error('Error fetching trash data:', error);
+            .catch((error) => {
+                console.error("Error fetching trash data:", error);
             });
-    }, []); 
+    }, []);
 
     return (
         <>
@@ -26,13 +32,22 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             <div className="layoutWrapper">
                 <div className="allCardWrapper">
                     <div className="">
-                        <p>Запросы на выполнение</p>
+                        <p>
+                            {searchCity
+                                ? `Поиск по городу: "${searchCity}"`
+                                : "Все города"}
+                        </p>
                     </div>
+                    
                     <div className="inputClass">
-                    <input 
-                        type="text"
-                        placeholder="Введите город">    
-                    </input>
+                        
+                        <input
+                            
+                            onChange={onChangeSearchInput}
+                            value={searchCity}
+                            type="text"
+                            placeholder="Введите адрес"
+                        ></input>
                     </div>
                     <div className="card">
                         <div className="cardWrapper">
@@ -53,7 +68,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </div>
                     </div>
                     <div className="cmp">
-                        {trashData.map((obj) => (
+                        {trashData.filter(item => item.address.includes(searchCity)).map((obj) => (
                             <Card
                                 address={obj.address}
                                 imgUrl={obj.photo_url}
