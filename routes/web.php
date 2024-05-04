@@ -15,6 +15,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/Profile', function () {
+    return Inertia::render('Profile');
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
