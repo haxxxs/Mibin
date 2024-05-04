@@ -36,7 +36,7 @@ ymaps.ready(function () {
             var firstGeoObject = res.geoObjects.get(0);
             var address = firstGeoObject.getAddressLine();
 
-            document.getElementById('address').value = address;
+            document.getElementById('addressInput').value = address;
             console.log("Адрес пользователя:", address);
         });
     }, function (error) {
