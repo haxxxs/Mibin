@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('utilizators', function (Blueprint $table) {
+        Schema::create('trash_statuses', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('surname');
-            $table->string('lastname')->nullable();
-            $table->date('birthdate');
-            $table->unsignedInteger('utilized_counter')->default(0);
+            $table->string('title');
         });
     }
 
@@ -26,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('utilizators');
+        Schema::dropIfExists('trash_status');
     }
 };
