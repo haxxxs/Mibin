@@ -1,4 +1,4 @@
-<?php
+git <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('lastname');
             $table->string('surname')->nullable();
-            $table->string('lastname')->nullable();
             $table->date('birthdate');
             $table->boolean('is_admin')->default(false);
             $table->unsignedInteger('report_counter')->default(0);
