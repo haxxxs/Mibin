@@ -11,7 +11,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const [searchCity, setSearchCity] = useState([]);
 
     const onChangeSearchInput = (event) => {
-        // console.log(event.target.value)
         setSearchCity(event.target.value);
     };
 
@@ -20,10 +19,19 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             .get("/trash")
             .then((response) => {
                 setTrashData(response.data);
-                console.log(data);
             })
             .catch((error) => {
                 console.error("Error fetching trash data:", error);
+            });
+
+        axios
+            .get("/get_adresses")
+            .then((response) => {
+                // setSearchCity(response.data);
+                console.log(response.data)
+            })
+            .catch((error) => {
+                console.error("Error fetching address data:", error);
             });
     }, []);
 
@@ -40,11 +48,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 : "Все города"}
                         </p>
                     </div>
-                    
+
                     <div className="inputClass">
-                        
+
                         <input
-                            
+
                             onChange={onChangeSearchInput}
                             value={searchCity}
                             type="text"
