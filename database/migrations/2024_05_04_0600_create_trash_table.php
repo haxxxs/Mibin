@@ -19,7 +19,7 @@ class CreateTrashTable extends Migration
             $table->string('address');
             $table->text('request_comment')->nullable();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('trash_status_id')->constrained();
+            $table->foreignId('trash_status_id')->default(1);
             $table->string('confirmation_photo_url')->nullable();
             $table->integer('price')->nullable();
             $table->string('city');

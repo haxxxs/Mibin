@@ -1,17 +1,19 @@
 export default function CardAuth(props) {
+    console.log(props.imgUrl)
     return (
         <div className="cardImg">
-            <img src={props.imgUrl} alt="" />
-            <div className="address">
+            <img className="imgAuth" src={props.imgUrl} alt="" />
+            
+            <div className="addressAuth">
                 <p>{props.address}</p>
             </div>
             <div className="commentAuth">
                 <p>{props.comment}</p>
             </div>
             <div className="verify">
-                <img src="" alt="" />
+                <img className="verImg" src={props.imgUrl} alt="" />
             </div>
-            <div className="btn">
+            <div className="btnAuth">
                 <p>100р</p>
             </div>
         </div>

@@ -8,10 +8,7 @@ export default function Header() {
                 <p>Mibin</p>
             </div>
             <div className="headerBtns">
-                <div className="firstBtn">
-                    <button>Выполнить заявку</button>
-                </div>
-                <a href="/RequestForm" className="noDecor">
+                <a href="/trash_cr" className="noDecor">
                     <div className="secondBtn">
                         <button>Оставить заявку</button>
                     </div>

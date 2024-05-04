@@ -26,7 +26,15 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             <Header />
             <div className="layoutWrapper">
                 <div className="allCardWrapper">
-                    <p>Запросы на выполнение</p>
+                    <div className="">
+                        <p>Запросы на выполнение</p>
+                    </div>
+                    <div className="inputClass">
+                    <input 
+                        type="text"
+                        placeholder="Введите город">    
+                    </input>
+                    </div>
                     <div className="card">
                         <div className="cardWrapper">
                             <div className="cardHeader">
@@ -37,7 +45,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     <p>Адрес</p>
                                 </div>
                                 <div className="description">
-                                    <p>Комментарии к запросу</p>
+                                    <p>Комментарии</p>
                                 </div>
                                 <div className="btn">
                                     <p>Кнопка</p>

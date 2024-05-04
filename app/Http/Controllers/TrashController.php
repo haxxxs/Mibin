@@ -23,13 +23,9 @@ class TrashController extends Controller
         $request->validate([
             'photo' => 'required|image|max:2048',
             'address' => 'required|string',
-            'city' => 'required|image|max:2048',
             'request_comment' => 'nullable|string',
-            'confirmation_photo' => 'nullable|image|max:2048',
+            'city' => 'required|string',
             'price' => 'required|numeric',
-            //'caller_id'=>'required|integer',
-            //'utilizator_id'=>'required|integer',
-            'trash_status'=>'required|integer'
         ]);
 
         $photoPath = $request->file('photo')->store('public/storage');
@@ -40,13 +36,14 @@ class TrashController extends Controller
         }
 
         $trash = new Trash();
+        $trash->user_id = "1";
         $trash->photo_url = '/' . basename($photoPath);
         $trash->address = $request->address;
         $trash->city = $request->city;
-        //$trash->caller_id = $request->index('user_id');
         $trash->request_comment = $request->request_comment;
         $trash->confirmation_photo_url = $confirmationPhotoPath ? '/' . basename($confirmationPhotoPath) : null;
         $trash->price = $request->price;
+        $trash->trash_status_id = 1;
         $trash->save();
 
         return response()->json(['message' => 'Trash created successfully', 'data' => $trash], 201);
