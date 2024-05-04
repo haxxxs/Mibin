@@ -46,7 +46,7 @@ class TrashController extends Controller
         $trash->trash_status_id = 1;
         $trash->save();
 
-        return response()->json(['message' => 'Trash created successfully', 'data' => $trash], 201);
+        return redirect("/");
     }
 
 }
