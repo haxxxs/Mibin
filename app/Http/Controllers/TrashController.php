@@ -12,6 +12,18 @@ class TrashController extends Controller
         $trash = Trash::all();
         return response()->json($trash);
     }
+    public function get_adresses()
+    {
+        $trash = Trash::all();
+
+        $addresses = [];
+
+        foreach ($trash as $item) {
+            $addresses[] = $item->address;
+        }
+
+        return response()->json($addresses);
+    }
 
     public function trashByCity(Request $request, string $thiscity)
     {
