@@ -9,6 +9,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
     const [trashData, setTrashData] = useState([]);
     const [searchCity, setSearchCity] = useState([]);
+    const [profileItems, setProfileItems] = useState([]);
 
     const onChangeSearchInput = (event) => {
         // console.log(event.target.value)
