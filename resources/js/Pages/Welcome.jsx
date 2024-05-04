@@ -26,7 +26,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 console.error("Error fetching trash data:", error);
             });
     }, []);
-    }, []);
 
     return (
         <>
