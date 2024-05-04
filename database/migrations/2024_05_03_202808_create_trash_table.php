@@ -21,6 +21,7 @@ class CreateTrashTable extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('confirmation_photo_url')->nullable();
             $table->integer('price')->nullable();
+            $table->string('city');
             $table->timestamps();
         });
     }
