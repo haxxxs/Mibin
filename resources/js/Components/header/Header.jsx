@@ -15,10 +15,12 @@ export default function Header() {
                 </a>
             </div>
             <div className="rightSide">
+                <a href="/get_adresses" className="noDecor">
                 <div className="adress">
                     <img src="images/address.png" alt="address" />
                     <p>Адресса</p>
                 </div>
+                </a>
                 <Link href="/Profile" className="noDecor">
                     <div className="profile">
                         <img src="images/profile.png" alt="" />

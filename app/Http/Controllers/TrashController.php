@@ -15,15 +15,10 @@ class TrashController extends Controller
     public function get_adresses()
     {
         $trash = Trash::all();
-
-        $addresses = [];
-
-        foreach ($trash as $item) {
-            $addresses[] = $item->address;
-        }
-
-        return response()->json($addresses);
+        $addresses = $trash->pluck('address')->toArray();
+        return view('address', compact('addresses'));
     }
+
 
     public function trashByCity(Request $request, string $thiscity)
     {
