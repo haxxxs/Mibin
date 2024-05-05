@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Card(props) {
-    const [isAdded,setIsAdded] = useState(false)
+    const [isAdded,setIsAdded] = useState(true)
 
     const onClickBtn = () => {
         setIsAdded(!isAdded)
