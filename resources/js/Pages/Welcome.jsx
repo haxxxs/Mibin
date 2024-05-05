@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import TrashComponent from "@/Components/aboba";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
-
-
     const [trashData, setTrashData] = useState([]);
     const [searchCity, setSearchCity] = useState([]);
     const [profileItems, setProfileItems] = useState([]);
@@ -29,7 +27,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             .get("/get_adresses")
             .then((response) => {
                 // setSearchCity(response.data);
-                console.log(response.data)
+                console.log(response.data);
             })
             .catch((error) => {
                 console.error("Error fetching address data:", error);
@@ -51,9 +49,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     </div>
 
                     <div className="inputClass">
-
                         <input
-
                             onChange={onChangeSearchInput}
                             value={searchCity}
                             type="text"
@@ -78,14 +74,21 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             </div>
                         </div>
                     </div>
-                    <div className="cmp">
-                        {trashData.filter(item => item.address.includes(searchCity)).map((obj) => (
-                            <Card
-                                address={obj.address}
-                                imgUrl={obj.photo_url}
-                                comment={obj.request_comment}
-                            />
-                        ))}
+                    <div className="allCardWrapper">
+                        <ul>
+                            {trashData
+                                .filter((item) =>
+                                    item.address.includes(searchCity)
+                                )
+                                .map((obj) => (
+                                        <Card
+                                        address={obj.address}
+                                        imgUrl={obj.photo_url}
+                                        comment={obj.request_comment}
+                                    />
+                                    
+                                ))}
+                        </ul>
                     </div>
                 </div>
             </div>
