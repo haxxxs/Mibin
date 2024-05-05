@@ -1,0 +1,156 @@
+@media (orientation: portrait) {
+    .myProfile p {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+    }
+
+    .inputBar {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .layoutWrapper .allCardWrapper {
+        background-color: #eaeaea;
+            border-radius: 25px;
+            border: solid 1px black;
+            padding: 10px;
+            height: 50vh;
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 89px;
+            .cardHeader {
+                display: flex;
+                width: 100vw;
+                .photoheader {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 394px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 13px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+                .photoheaderAuth {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 584px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 13px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+                .addressHeader {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 352px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 13px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+                .addressHeaderAuth {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 352px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 13px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+                .description {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 13px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 272px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 13px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+                .descriptionAuth {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 78px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 10px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+                .verifyPhoto {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 72px;
+                    height: 46px;
+                    border: 1px solid white;
+                    background: linear-gradient(#13563a, #35b661);
+                    p {
+                        color: white;
+                        font-size: 10px;
+                        line-height: 24.52px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            
+        }
+    }
+}
