@@ -5,9 +5,9 @@ export default function Header() {
         <div className="header">
             <div className="logoHeader">
                 <img src="images/headerLogo.png" alt="Logo" />
-                <p>Mibin</p>
+                <p>Meebin</p>
             </div>
-            <div className="headerBtns">
+            <div className="headerButton">
                 <a href="/trash_cr" className="noDecor">
                     <div className="secondBtn">
                         <button>Оставить заявку</button>
@@ -15,9 +15,9 @@ export default function Header() {
                 </a>
             </div>
             <div className="rightSide">
-                <div className="adress">
+                <div className="address">
                     <img src="images/address.png" alt="address" />
-                    <p>Адресса</p>
+                    <p>Адреса</p>
                 </div>
                 <Link href="/Profile" className="noDecor">
                     <div className="profile">

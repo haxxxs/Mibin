@@ -21,37 +21,50 @@ export default function Profile() {
         <>
             <Header />
             <div className="layoutWrapper">
-                <div className="allCardWrapper">
-                    <p>Мой кабинет</p>
-                    <div className="card">
-                        <div className="cardWrapper">
-                            <div className="cardHeader">
-                                <div className="photoheader">
-                                    <p>Фото</p>
-                                </div>
-                                <div className="addressHeader">
-                                    <p>Адрес</p>
-                                </div>
-                                <div className="descriptionAuth">
-                                    <p>Комментарии</p>
-                                </div>
-                                <div className="verifyPhoto">
-                                    <p>Подтверждение</p>
-                                </div>
-                                <div className="btn">
-                                    <p>Вознаграждения</p>
-                                </div>
-                            </div>
-                        </div>
+                <div className="allProfileWrapper">
+                    <div className="myProfile">
+                        <p>Мой кабинет</p>    
                     </div>
-                    {arr.map((obj) => (
+                    <div className="dataColumn">
+
+                    </div>
+                    <div className="dataWrapper">
+                        <p>Имя</p>
+                        <input type="text" className="inputBar" placeholder="Имя"></input>
+                        <p>Фамилия</p>
+                        <input type="text" className="inputBar" placeholder="Фамилия"></input>
+                        <p>Отчество</p>
+                        <input type="text" className="inputBar" placeholder="Отчество"></input>
+                        <p>Город</p>
+                        <input type="text" className="inputBar" placeholder="Город"></input>
+                        <p>Дата рождения</p>
+                        <input type="text" className="inputBar" placeholder="Дата рождения"></input>
+                        {/* <div className="cardHeader">
+                            <div className="photoheader">
+                                <p>Фото</p>
+                            </div>
+                            <div className="addressHeader">
+                                <p>Адрес</p>
+                            </div>
+                            <div className="descriptionAuth">
+                                <p>Комментарии</p>
+                            </div>
+                            <div className="verifyPhoto">
+                                <p>Подтверждение</p>
+                            </div>
+                            <div className="btn">
+                                <p>Вознаграждения</p>
+                            </div>
+                        </div> */}
+                    </div>
+                </div>
+                    {/* {arr.map((obj) => (
                         <CardAuth
                             imgUrl={obj.imgUrl}
                             address={obj.address}
                             comment={obj.comment}
                         />
-                    ))}
-                </div>
+                    ))} */}
             </div>
         </>
     );
